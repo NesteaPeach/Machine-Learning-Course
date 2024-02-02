@@ -9,6 +9,9 @@ from sklearn.impute import SimpleImputer
 # Load the csv data into pandas data frame
 dataset = pd.read_csv('data/Data.csv')
 
+# how many missing data we have in each column
+missing_data = dataset.isnull().sum()
+print(missing_data)
 
 # X is for features and Y is for dependent variable
 # the features are all the columns except the last one, the last one is the vector
